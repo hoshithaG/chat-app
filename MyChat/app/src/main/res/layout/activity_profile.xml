@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/action_bar_layout" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="15dp"
+        android:background="@mipmap/ic_launcher" />
+
+    <RelativeLayout
+        android:id="@+id/user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_image">
+
+        <TextView
+            android:id="@+id/lbl_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="monospace"
+            android:text="Username"
+            android:textAllCaps="false"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/lbl_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_name"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="monospace"
+            android:text="Email Address"
+            android:textAllCaps="false"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/lbl_username"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="username" />
+
+        <EditText
+            android:id="@+id/user_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lbl_email"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="user@mail.com" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_info"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Update Account"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btn_updatePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_update"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Change Password"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btn_deleteAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_updatePassword"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Delete Account"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MessageActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/MenuStyle">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="user"
+                android:textColor="@android:color/white" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_view_chats"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/msgBox"
+        android:layout_below="@+id/bar_layout"
+        android:background="#eee" />
+
+    <RelativeLayout
+        android:id="@+id/msgBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@android:color/white"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:id="@+id/msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/send"
+            android:background="@android:color/transparent"
+            android:hint="Message" />
+
+        <TextView
+            android:id="@+id/send"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="3dp"
+            android:background="@drawable/msg_info_bg"
+            android:gravity="center"
+            android:text="Send"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:padding="5dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/chat_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/show_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/profile_image"
+        android:layout_marginLeft="5dp"
+        android:layout_centerVertical="true"
+        android:text="Text From Friend"
+        android:textColor="@android:color/white"
+        android:padding="5dp"
+        android:background="@drawable/background_friend"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/msg_info"
+        android:background="@drawable/msg_delivered_bg"
+        android:textColor="@android:color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_margin="1dp"
+        android:visibility="gone"
+        android:textSize="10dp"
+        android:text="Delivered"
+        android:layout_below="@+id/chat_layout" />
+
+
+    <ImageView
+        android:id="@+id/ic_msg_delivered"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/ic_msg_delivered"
+        android:layout_margin="1dp"
+        android:layout_below="@id/chat_layout"
+        android:layout_toEndOf="@+id/msg_info"
+        android:visibility="gone"
+        android:layout_toRightOf="@+id/msg_info" />
+
+    <ImageView
+        android:id="@+id/ic_msg_seen"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/ic_msg_seen"
+        android:layout_margin="1dp"
+        android:visibility="gone"
+        android:layout_below="@id/chat_layout"
+        android:layout_toRightOf="@+id/msg_info"
+        android:layout_toEndOf="@+id/msg_info" />
+
+
+</RelativeLayout>
